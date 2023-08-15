@@ -1,0 +1,10 @@
+<h1>Liste des Articles</h1>
+
+<ul>
+  <% @articles.each do |article| %>
+    <h2> <%= link_to article.title, article_path(article), class: "text-decoration-none"%>  </h2>
+      <%= link_to '<i class="fa-solid fa-trash-can"></i>'.html_safe, article_path(article), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+
+  <% end %>
+</ul>
+<%= link_to 'New article', new_article_path %>

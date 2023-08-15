@@ -1,0 +1,7 @@
+<h1><%= @article.title %></h1>
+
+<p>
+  <strong>Details:</strong> <%= @article.content %><br>
+</p>
+<%= link_to 'Edit article', edit_article_path %>
+<%= link_to "Back to articles list", articles_path %>
